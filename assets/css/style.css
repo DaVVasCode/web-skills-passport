@@ -1,0 +1,193 @@
+@font-face {
+    font-family: "Rubik-Regular";
+    src: url("../fonts/Rubik-Regular.ttf");
+}
+
+@keyframes rota {
+    0% {transform: rotate(0deg);}
+    100% {transform: rotate(180deg)}
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    padding: 0;
+    margin: 50px 0;
+    font-family: "Rubik-Regular";
+}
+
+#wrapper {
+    width: 800px;
+    margin: 0 auto;
+}
+
+header {
+    padding-left: 30px;
+    display: inline-flex;
+}
+
+header #skills-logo {
+    background-image: url("../img/Logo.jpg");
+    width: 100px;
+    height: 100px;
+    margin: 10px;
+    border-radius: 50%;
+    background-color: #08C;
+    position: relative;
+    background-position: center center;
+    background-size: contain;
+    border: 3px solid #08C;
+}
+
+h1 {
+    display: inline-block;
+    margin-top: 30px;
+    margin-left: 10px;
+    height: 45px;
+    border-bottom: 3px solid #08C;
+    user-select: none;
+}
+
+#container {
+    display: flex;
+    height: 500px;
+}
+
+aside {
+    width: 280px;
+    margin: 10px;
+}
+
+main {
+    width: 500px;
+    height: 480px;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    margin: 10px;
+}
+
+.skills {
+    width: 100px;
+    height: 100px;
+    margin: 10px;
+    border-radius: 50%;
+    background-color: #08C;
+    transition: transform 0.5s ease;
+    position: relative;
+    background-position: center center;
+    background-size: contain;
+}
+
+main .skills-rotate:hover {
+    transform: rotate(180deg);
+}
+
+main #skills-html {
+    background-image: url("../img/html5.png");
+}
+
+main #skills-css {
+    background-image: url("../img/css3.jpg");
+}
+
+main #skills-js {
+    background-image: url("../img/JS6.jpg");
+}
+
+main #skills-php {
+    background-image: url("../img/PHP.png");
+}
+
+main #skills-git {
+    background-image: url("../img/Git.jpeg");
+}
+
+main #skills-react {
+    background-image: url("../img/React_JS.png");
+}
+
+main #skills-redux {
+    background-image: url("../img/React-redux.png");
+}
+
+main #skills-node {
+    background-image: url("../img/Node_js.png");
+}
+
+.brightness-black {
+    filter: brightness(90%) grayscale(90%);
+}
+
+.circle-main {
+    width: 250px;
+    height: 250px;
+    margin: 10px auto;
+    position: relative;
+    background: white;
+    transition: transform 0.5s ease;
+}
+
+.circle-pie {
+    width: 50%;
+    height: 100%;
+    transform-origin: 100% 50%;
+    position: absolute;
+    background: #08C;
+}
+
+.circle-spinner {
+    border-radius: 125px 0 0 125px;
+    z-index: 2;
+    border-right: none;
+    transform: rotate(180deg);
+    animation: rota 2s linear;
+}
+
+.circle-filler {
+    border-radius: 0 125px 125px 0;
+    z-index: 1;
+    border-left: none;
+    left: 50%;
+    opacity: 0;
+}
+
+.circle-mask {
+    width: 50%;
+    height: 100%;
+    position: absolute;
+    z-index: 3;
+    opacity: 1;
+    left: -1px;
+    top: -1px;
+    background: inherit;
+}
+
+.circle-logo {
+    width: 92%;
+    height: 92%;
+    background-color: #fff;
+    z-index: 4;
+    position: absolute;
+    border: 1px solid #08C;
+    border-radius: 50%;
+    left: 4%;
+    top: 4%;
+    background-color: #fff;    
+}
+
+.circle-main:hover {
+    transform: scale(1.1);
+}
+
+.circle-logo span {
+    position: absolute;
+    left: 22%;
+    top: 31%;
+    font-size: 70px;
+    color: #08C;
+    user-select: none;
+}
+
